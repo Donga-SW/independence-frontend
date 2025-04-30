@@ -32,7 +32,7 @@ export default function Header() {
               타임라인
             </Link>
             <Link
-              href="#map"
+              href="/knowledgegraph"
               className="relative hover:text-[#e9e4da] transition-colors duration-300 
                          after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 
                          after:h-[2px] after:bg-[#e9e4da] after:transition-all after:duration-300 

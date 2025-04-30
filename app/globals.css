@@ -1,24 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'fullpage.js/dist/fullpage.css';
 
+/* 기본 구조 설정 */
 html, body, #__next {
   height: 100%;
-  overflow: auto; /* 또는 제거 */
+  overflow: auto;
 }
-
 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* 유틸리티 클래스 */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
+/* 루트 및 다크모드 변수 정의 */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -55,6 +56,7 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -91,15 +93,17 @@ body {
   }
 }
 
+/* 기본 배경 및 텍스트 색상 설정 */
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   body {
     @apply bg-background text-foreground;
   }
 }
 
+/* 버튼 애니메이션 컴포넌트 */
 @layer components {
   .btn-7-custom {
     @apply relative text-white font-bold px-6 py-2 overflow-hidden bg-stone-600
@@ -130,5 +134,3 @@ body {
     background-color: #000;
   }
 }
-
-
